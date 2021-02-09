@@ -10,14 +10,14 @@ public class Animal {
         setIsEatingMeat(isEatingMeat);
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.Name = name;
     }
     public String getName() {
         return this.Name;
     }
 
-    public void setIsEatingMeat(boolean isEatingMeat) {
+    private void setIsEatingMeat(boolean isEatingMeat) {
        this.IsEatingMeat = isEatingMeat;
     }
     public boolean getIsEatingMeat() {

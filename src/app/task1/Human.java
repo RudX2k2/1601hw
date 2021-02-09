@@ -9,7 +9,7 @@ public class Human {
         setAge(age);
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.Name = name;
     }
     public String getName() {
@@ -18,7 +18,7 @@ public class Human {
 
 
 
-    public void setAge(int age) {
+    private void setAge(int age) {
         if(age >0 && age < 200)
             this.Age = age;
 
@@ -27,8 +27,7 @@ public class Human {
         return this.Age;
     }
 
-
-    public String ShowInfo()
+    public String getInfo()
     {
         return "Hello from " + getName() + ", i am " + getAge() + " years old";
     }

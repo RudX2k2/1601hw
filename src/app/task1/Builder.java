@@ -1,7 +1,6 @@
 package app.task1;
-import app.task1.Human;
 
-public class Builder extends Human{
+public class Builder extends Human implements iWork {
     private final String Occupation = "Builder";
     private String Degree;
     private String CompanyName;
@@ -12,11 +11,11 @@ public class Builder extends Human{
         setCompanyName(companyName);
     }
 
-    public void setDegree(String degree)
+    private void setDegree(String degree)
     {
         this.Degree = degree;
     }
-    public void setCompanyName(String companyName)
+    private void setCompanyName(String companyName)
     {
         this.CompanyName = companyName;
     }
@@ -34,7 +33,7 @@ public class Builder extends Human{
         System.out.println("Who is not works - that eats!\n");
     }
 
-    public String showInfo(){
-        return super.ShowInfo() + " i am " + Occupation + " and working in " + getCompanyName();
+    public void showInfo(){
+        System.out.println(super.getInfo() + " i am " + getDegree() + " and working in " + getCompanyName());
     }
 }

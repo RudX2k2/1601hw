@@ -1,12 +1,12 @@
 package app.task2;
-public class Tiger extends Animal{
+public class Tiger extends Animal implements iAction{
     private int CountOfStripes;
 
     public Tiger(String name, boolean isEatingMeat, int countOfStripes){
         super(name, isEatingMeat);
         this.CountOfStripes = countOfStripes;
     }
-    public void setCountOfStripes(int countOfStripes)
+    private void setCountOfStripes(int countOfStripes)
     {
         if(countOfStripes > 0)
         {
@@ -19,7 +19,7 @@ public class Tiger extends Animal{
     public void Action()
     {
         super.ShowInfo();
-        System.out.println("Hunting...\n");
+        System.out.println("I am strippy tiger, i have " + getCountOfStripes() + " black stripes on my body\n");
     }
 
 }

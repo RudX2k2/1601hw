@@ -1,13 +1,13 @@
 package app.task2;
 
-public class Kangoroo extends Animal{
+public class Kangoroo extends Animal implements iAction{
     private int VolumeOfBag;
 
     public Kangoroo(String name, boolean isEatingMeat, int volumeOfBag){
         super(name, isEatingMeat);
         setVolumeOfBag(volumeOfBag);
     }
-    public void setVolumeOfBag(int volumeOfBag)
+    private void setVolumeOfBag(int volumeOfBag)
     {
         if(VolumeOfBag > 0)
         {
@@ -20,6 +20,6 @@ public class Kangoroo extends Animal{
     public void Action()
     {
         super.ShowInfo();
-        System.out.println("Jumpoooo poweeeer\n");
+        System.out.println("I have a bag for my baby, it has " + getVolumeOfBag() + " cm3\n");
     }
 }
